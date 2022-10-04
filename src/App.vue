@@ -1,7 +1,7 @@
 <template>
-  <div class="p-4 text-black">Hello World!</div>
+  <div class="p-4 text-black">Hello {{ data.name }}!</div>
 </template>
 
 <script lang="ts" setup>
-// YOUR CODE HERE
+const data = reactive({ name: 'Player' })
 </script>
