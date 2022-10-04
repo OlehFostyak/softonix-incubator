@@ -4,5 +4,11 @@
 </template>
 
 <script lang="ts" setup>
+import { eslintExample } from '@/examples/eslint-example'
+
 const data = reactive({ name: 'Player' });
+
+onMounted(() => {
+  eslintExample.renderList()
+})
 </script>
