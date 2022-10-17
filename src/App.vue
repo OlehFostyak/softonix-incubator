@@ -1,14 +1,48 @@
 <template>
-  <div class="p-4 text-black text-black">Hello {{ data.name }}!
+  <div class="sticky-panel p-4 pb-0">
+    <h3 class="font-medium">Countries</h3>
+
+    <hr class="mt-2">
+  </div>
+
+  <div class="p-4 h-[2000px] flex flex-col">
+    <ul class="list-disc list-inside">
+      <li v-for="country in countryService.countries" :key="country.id">
+        {{ country.name }}
+
+        <ol>
+          <li v-for="city in country.cities" :key="city" class="ml-4">
+            - {{ city }}
+          </li>
+        </ol>
+      </li>
+    </ul>
+
+    <div id="bottm" class="mt-auto">Bottom</div>
+
+    <!-- <div>
+      <pre>
+        <div v-html="JSON.stringify(countryService.citiesHashed, null, 2)" />
+      </pre>
+    </div> -->
   </div>
 </template>
 
 <script lang="ts" setup>
-import { eslintExample } from '@/examples/eslint-example'
+import { countryService } from '@/examples/data-preparation'
 
-const data = reactive({ name: 'Player' });
-
-onMounted(() => {
-  eslintExample.renderList()
-})
+// const countries = countryService.prepareCountriesList()
 </script>
+
+<style lang="scss">
+.sticky-panel {
+  width: 100%;
+  position: fixed;
+  background: white;
+  top: 0;
+}
+
+.sticky-panel + div {
+  margin-top: 50px;
+}
+</style>
