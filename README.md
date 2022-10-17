@@ -33,3 +33,8 @@ TBA
     - Compare intersection observer vs scroll events via example
     - Introduce homework folder with tasks
 
+### Homework
+This section includes homework. You need to fork this repo, finish homework in your repo, push your changes to origin and send URL with your forked repo and completed task to related person.
+
+- [Homework task1](https://github.com/Softonix/softonix-incubator/blob/section-2-intro-to-js/src/homework/homework-1-promises.js)
+- [Homework task2](https://github.com/Softonix/softonix-incubator/blob/section-2-intro-to-js/src/homework/homework-2-memoize.js)
