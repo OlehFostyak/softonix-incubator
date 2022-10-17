@@ -43,6 +43,6 @@ import { countryService } from '@/examples/data-preparation'
 }
 
 .sticky-panel + div {
-  margin-top: 50px;
+  padding-top: 64px;
 }
 </style>
