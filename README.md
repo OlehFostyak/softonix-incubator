@@ -1,4 +1,4 @@
-# Section #1 - tools & technologies
+# Section #1 - intro to modern js
 
 ### Goal
 This section represents an introduction to modern javascript concepts and patterns that will help us to write better, reusable and maintainable code. You will learn how to prepare your data before rendering it, how to write custom async functions and use modern javascript API such as observables.
