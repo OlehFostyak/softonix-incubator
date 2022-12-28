@@ -46,14 +46,14 @@ class Collection {
 }
 
 const stringCollection = new Collection()
-stringCollection.add(['Hello, World!'])
+stringCollection.add('Hello, World!')
 stringCollection.contains(el => el === 'Hello, TS')
 
 const strings = stringCollection.get()
 
 const userCollection = new Collection()
 userCollection.add({ id: 1, name: 'Viktor' })
-userCollection.remove(el => el.id === 1)
+userCollection.delete(el => el.id === 1)
 const users = userCollection.get()
 
 export {
