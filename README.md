@@ -17,6 +17,7 @@ but very important to understand. It shows how to work with classes, conditional
 - What is Typescript? [link](https://www.typescriptlang.org)
 - Typescript tutorial  [link](https://www.w3schools.com/typescript/index.php)
 - Typescript exercises [link](https://www.w3schools.com/typescript/typescript_exercises.php)
+- Type chanllenge (important as easy level) [link](https://github.com/type-challenges/type-challenges)
 
 ### Video Material
 [Youtube link](https://youtu.be/6wLWB2GBBxU)
