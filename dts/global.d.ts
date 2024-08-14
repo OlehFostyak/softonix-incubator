@@ -1,25 +1,33 @@
 import 'vue-router'
-import { routeNames } from '@/router'
-import { EPortalNames } from '@/plugins'
-import { EComponentSize, EComponentType } from '@/types'
+import { routeNames } from '@/router/route-names'
+import { globalProperties, portalNames } from '@/plugins'
+import { EElComponentSize, EElComponentType } from '@/types/enums'
 
 declare module 'vue-router' {
   interface RouteMeta {
     // todo: this is just an example. Please setup your own route meta params.
-    label?: string;
+    label?: string
     parentName?: string
     requireAuth?: boolean
   }
 }
 
 declare module '@vue/runtime-core' {
-  export interface ComponentCustomProperties {
+  interface ComponentCustomProperties {
     // todo: Here you define you global vue definitions.
-    $portalNames: typeof EPortalNames
+    $portalNames: typeof portalNames
     $routeNames: typeof routeNames
 
     // todo: These ones are used only for element library for size and type props;
-    $componentSize: typeof EComponentSize
-    $componentType: typeof EComponentType
+    $elComponentSize: typeof EElComponentSize
+    $elComponentType: typeof EElComponentType
   }
 }
+
+declare global {
+  interface ObjectConstructor {
+    keys<T>(obj: T): Array<keyof T>
+  }
+}
+
+export { }

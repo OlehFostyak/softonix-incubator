@@ -3,6 +3,7 @@ require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
   root: true,
+
   extends: [
     'plugin:vue/vue3-recommended',
     'eslint:recommended',
@@ -10,12 +11,13 @@ module.exports = {
     '@vue/eslint-config-typescript/recommended',
     './.eslintrc-auto-import.json'
   ],
+
   parserOptions: {
     ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser'
   },
 
-  ignorePatterns: ['*.d.ts'],
+  ignorePatterns: ['dts/*.d.ts', 'src/api/types/schema.d.ts', 'src/api/types/axios.d.ts'],
 
   rules: {
     'max-len': ['error', {
@@ -24,7 +26,8 @@ module.exports = {
       ignoreTrailingComments: true,
       ignoreUrls: true,
       ignoreStrings: true,
-      ignoreRegExpLiterals: true
+      ignoreRegExpLiterals: true,
+      ignorePattern: 'url\\('
     }],
     'no-undef': 'off',
     'no-prototype-builtins': 'off',
@@ -55,7 +58,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': ['error', { ignoreRestSiblings: true }],
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     indent: 'off',
-    '@typescript-eslint/indent': ['error', 2, { VariableDeclarator: 4 }],
+    '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/type-annotation-spacing': ['error', {
       before: false,
       after: true,
